@@ -10,3 +10,7 @@ RUN \
   mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin && \
   rm phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
   rm -r phantomjs-$PHANTOMJS_VERSION-linux-x86_64
+
+ADD Gemfile .
+ADD Gemfile.lock .
+RUN bundle install
